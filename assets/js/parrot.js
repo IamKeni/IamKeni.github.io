@@ -206,23 +206,21 @@ cNd.........................................;lOc
 </span>`
 ];
 
-
 const colors = ['red', 'yellow', 'green', 'blue', 'magenta', 'cyan', 'white'];
+let currentFrame = 0;
+const outputElement = document.getElementById('output');
 
-let index = 0;
-const output = document.getElementById('output');
-
-function parseAnsi(text) {
-  return text.replace(/<span.*?>|<\/span>/g, "");
+// Functie die het volgende frame van de papegaai tekent
+function nextFrame() {
+  const color = colors[Math.floor(Math.random() * colors.length)];
+  
+  // Update de HTML met het nieuwe frame en een willekeurige kleur
+  outputElement.innerHTML = `<span class="${color}">${frames[currentFrame]}</span>`;
+  
+  // Ga naar het volgende frame, of terug naar het begin
+  currentFrame = (currentFrame + 1) % frames.length;
 }
 
-function getRandomColor() {
-  return colors[Math.floor(Math.random() * colors.length)];
-}
-
-setInterval(() => {
-  const randomColor = getRandomColor();
-  output.innerHTML = `<span class="${randomColor}">${frames[index]}</span>`;
-  index = (index + 1) % frames.length;
-}, 80);
+// Start de animatie loop (80ms is de klassieke parrot.live snelheid)
+setInterval(nextFrame, 80);
 

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body data-theme="light">
-    <!-- Animated Background -->
     <div class="background-animation">
         <div class="gradient-orbs">
             <div class="orb orb-1"></div>
@@ -22,7 +21,7 @@
         <div class="grid-pattern"></div>
     </div>
 
-    <!-- Navigation -->
+    <!-- Henry Elsinga - Portfolio -->
     <nav class="main-nav">
         <div class="nav-content">
             <a href="#home" class="nav-logo">HE</a>
@@ -50,88 +49,79 @@
     <div class="container">
         <main class="portfolio-wrapper">
             
-            <!-- Hero Section -->
-            <section id="home" class="hero-section">
-                <div class="hero-grid">
-                    <div class="hero-content">
-                        <!--<div class="status-badge">
-                            <span class="status-dot"></span>
-                            <span data-translate="available">Beschikbaar voor projecten</span>
-                        </div>-->
+            <section id="home" class="hero">
+                <div class="hero-inner">
+                    <div class="hero-text">
                         <h1 class="hero-title">
-                            <span data-translate="hi" class="hero-greeting">Hoi, ik ben</span><br>
-                            <span class="name-highlight">Henry Elsinga</span>
+                            <span data-translate="hi" class="hero-label">Hoi, ik ben</span><br>
+                            <span class="name">Henry Elsinga</span>
                         </h1>
-                        <p class="hero-subtitle" data-translate="hero-subtitle">
+                        <p class="hero-bio" data-translate="hero-subtitle">
                             HBO-ICT student Cloud & Security Engineering met een sterke basis in elektrotechniek en IT-infrastructuur. Ervaring met Windows, Linux, Cisco- en UniFi-netwerken en security. Gericht op het ontwerpen en beveiligen van betrouwbare (cloud)omgevingen.
                         </p>
                         
-                        <!-- Stats -->
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">2+</div>
-                                <div class="stat-label" data-translate="stat1">Jaar IT Ervaring</div>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-val">2+</span>
+                                <span class="stat-name" data-translate="stat1">Jaar IT Ervaring</span>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">5+</div>
-                                <div class="stat-label" data-translate="stat2">Technische Skills</div>
+                            <div class="stat">
+                                <span class="stat-val">5+</span>
+                                <span class="stat-name" data-translate="stat2">Technische Skills</span>
                             </div>
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label" data-translate="stat3">Leergierig</div>
+                            <div class="stat">
+                                <span class="stat-val">100%</span>
+                                <span class="stat-name" data-translate="stat3">Leergierig</span>
                             </div>
                         </div>
 
-                        <!-- CTA Buttons -->
-                        <div class="cta-buttons">
+                        <div class="hero-actions">
                             <a href="#contact" class="btn btn-primary">
                                 <span data-translate="cta-contact">Neem Contact Op</span>
                                 <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a href="#projects" class="btn btn-secondary">
+                            <a href="#projects" class="btn btn-outline">
                                 <span data-translate="cta-work">Bekijk Werk</span>
                             </a>
                         </div>
 
-                        <!-- Social Links -->
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/henry-elsinga-b811a8236/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <div class="hero-socials">
+                            <a href="https://www.linkedin.com/in/henry-elsinga-b811a8236/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="https://twitter.com/kenixwastaken" class="social-link" target="_blank" rel="noopener" aria-label="Twitter">
+                            <a href="https://twitter.com/kenixwastaken" class="social-icon" target="_blank" rel="noopener" aria-label="Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="https://github.com/IamKenii" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+                            <a href="https://github.com/IamKenii" class="social-icon" target="_blank" rel="noopener" aria-label="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
 
-                    <div class="hero-visual">
-                        <div class="profile-card glass-card">
-                            <div class="profile-image">
-                                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300d4ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230099ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='100' cy='100' r='100' fill='url(%23grad)'/%3E%3Ctext x='100' y='130' text-anchor='middle' fill='white' font-size='70' font-family='Outfit, Arial' font-weight='700'%3EHE%3C/text%3E%3C/svg%3E" alt="Henry Elsinga">
+                    <div class="hero-figure">
+                        <div class="profile-box">
+                            <div class="profile-img">
+                                <img src="./assets/img/unnamed.png" alt="Henry Elsinga" style="filter: contrast(1.05) brightness(1.02);">
                             </div>
-                            <div class="profile-info">
+                            <div class="profile-meta">
                                 <h3>Henry Elsinga</h3>
                                 <p data-translate="profile-role">Cloud & Security Student</p>
-                                <div class="profile-location">
+                                <div class="profile-loc">
                                     <i class="fas fa-map-marker-alt"></i>
                                     <span>Nederland</span>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Floating badges -->
-                        <div class="floating-badge badge-1">
+                        <div class="tag-floating tag-1">
                             <i class="fas fa-shield-alt"></i>
                             <span data-translate="badge1">Security</span>
                         </div>
-                        <div class="floating-badge badge-2">
+                        <div class="tag-floating tag-2">
                             <i class="fas fa-code"></i>
                             <span data-translate="badge2">Development</span>
                         </div>
-                        <div class="floating-badge badge-3">
+                        <div class="tag-floating tag-3">
                             <i class="fas fa-cloud"></i>
                             <span data-translate="badge3">Cloud</span>
                         </div>
@@ -139,29 +129,28 @@
                 </div>
             </section>
 
-            <!-- About Section -->
-            <section id="about" class="content-section about-section">
-                <div class="section-header">
-                    <div class="section-icon">
+            <section id="about" class="about reveal">
+                <div class="section-top">
+                    <div class="icon-wrap">
                         <i class="fas fa-user"></i>
                     </div>
-                    <h2 class="section-title" data-translate="about">Over Mij</h2>
+                    <h2 class="title" data-translate="about">Over Mij</h2>
                 </div>
-                <div class="about-grid">
-                    <div class="glass-card about-card">
-                        <p class="about-text" data-translate="about-text">
+                <div class="about-main">
+                    <div class="glass-card about-desc">
+                        <p class="text" data-translate="about-text">
                             Ik ben Henry, HBO-ICT student Cloud & Security Engineering aan Windesheim. Mijn achtergrond ligt in zowel elektrotechniek als IT-infrastructuur, waardoor ik systemen begrijp van fysieke installatie tot cloudomgeving.
                         </p>
-                        <p class="about-text" data-translate="about-text2">
+                        <p class="text" data-translate="about-text2">
                             Tijdens mijn MBO-opleidingen heb ik gewerkt met Windows, Linux, Cisco en netwerk- en securityoplossingen. Ik combineer praktijkervaring met een security-first mindset.
                         </p>
-                        <p class="about-text" data-translate="about-text3">
+                        <p class="text" data-translate="about-text3">
                             Ik ben nog volop aan het leren, maar elke dag word ik beter. Mijn focus ligt op cloud computing, hybride infrastructuren en het beveiligen van informatiesystemen binnen moderne omgevingen. Daarnaast verdiep ik mij actief in de wereld van cybersecurity. De software en tools die ik bouw publiceer ik onder de naam <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a>.
                         </p>
                     </div>
-                    <div class="glass-card highlights-card">
+                    <div class="glass-card about-highlights">
                         <h3 data-translate="highlights">Wat ik kan</h3>
-                        <ul class="highlights-list">
+                        <ul class="check-list">
                             <li>
                                 <i class="fas fa-check-circle"></i>
                                 <span data-translate="highlight1">HBO-ICT student (2de jaar)</span>
@@ -183,147 +172,143 @@
                 </div>
             </section>
 
-            <!-- Education Section -->
-            <section class="content-section education-section">
-                <div class="section-header">
-                    <div class="section-icon">
+            <section class="edu-wrap reveal">
+                <div class="section-top">
+                    <div class="icon-wrap">
                         <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h2 class="section-title" data-translate="education">Opleiding</h2>
+                    <h2 class="title" data-translate="education">Opleiding</h2>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-icon">
+                <div class="edu-timeline">
+                    <div class="edu-node">
+                        <div class="node-dot"></div>
+                        <div class="node-box glass-card">
+                            <div class="node-icon">
                                 <i class="fas fa-university"></i>
                             </div>
-                            <div class="timeline-badge current" data-translate="current">Huidig</div>
-                            <h3 class="timeline-title">HBO-ICT | Cloud & Security Enegeneer</h3>
-                            <p class="timeline-school">Windesheim Hogeschool</p>
-                            <p class="timeline-period" data-translate="edu1-period">2024 - 2028 (verwacht)</p>
-                            <p class="timeline-desc" data-translate="edu1-desc">Eerste jaar HBO-ICT met focus op cybersecurity. Ik leer hier over ethical hacking, netwerkbeveiliging en informatie security.</p>
+                            <div class="node-status status-current" data-translate="current">Huidig</div>
+                            <h3 class="node-title">HBO-ICT | Cloud & Security Enegeneer</h3>
+                            <p class="node-place">Windesheim Hogeschool</p>
+                            <p class="node-time" data-translate="edu1-period">2024 - 2028 (verwacht)</p>
+                            <p class="node-text" data-translate="edu1-desc">Eerste jaar HBO-ICT met focus op cybersecurity. Ik leer hier over ethical hacking, netwerkbeveiliging en informatie security.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-icon">
+                    <div class="edu-node">
+                        <div class="node-dot"></div>
+                        <div class="node-box glass-card">
+                            <div class="node-icon">
                                 <i class="fas fa-university"></i>
                             </div>
-                            <div class="timeline-badge completed" data-translate="completed">Afgerond</div>
-                            <h3 class="timeline-title">HBO-ICT | Propedeuze</h3>
-                            <p class="timeline-school">Windesheim Hogeschool</p>
-                            <p class="timeline-period" data-translate="edu2-period">2024 - 2025</p>
-                            <p class="timeline-desc" data-translate="edu2-desc">Eerste jaar HBO-ICT kennis gemaakt met de volle breedte van ICT: hardware, software en gebruikersgericht denken. Ik deed basiskennis op van systemen en infrastructuur en legde zo een sterke fundering voor mijn verdere specialisatie.</p>
+                            <div class="node-status status-done" data-translate="completed">Afgerond</div>
+                            <h3 class="node-title">HBO-ICT | Propedeuze</h3>
+                            <p class="node-place">Windesheim Hogeschool</p>
+                            <p class="node-time" data-translate="edu2-period">2024 - 2025</p>
+                            <p class="node-text" data-translate="edu2-desc">Eerste jaar HBO-ICT kennis gemaakt met de volle breedte van ICT: hardware, software en gebruikersgericht denken. Ik deed basiskennis op van systemen en infrastructuur en legde zo een sterke fundering voor mijn verdere specialisatie.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-icon">
+                    <div class="edu-node">
+                        <div class="node-dot"></div>
+                        <div class="node-box glass-card">
+                            <div class="node-icon">
                                 <i class="fas fa-school"></i>
                             </div>
-                            <div class="timeline-badge completed" data-translate="completed">Afgerond</div>
-                            <h3 class="timeline-title">MBO-4 | Expert IT Systems & Devices</h3>
-                            <p class="timeline-school">ROC Friesepoort te Emmeloord</p>
-                            <p class="timeline-period" data-translate="edu3-period">2021 - 2024</p>
-                            <p class="timeline-desc" data-translate="edu3-desc">Hier heb ik de basis gelegd: netwerken configureren, servers opzetten, troubleshooten. Tijdens mijn stage heb ik het datacenter van mijn school opgezet, wat echt veel ervaring heeft opgeleverd.</p>
+                            <div class="node-status status-done" data-translate="completed">Afgerond</div>
+                            <h3 class="node-title">MBO-4 | Expert IT Systems & Devices</h3>
+                            <p class="node-place">ROC Friesepoort te Emmeloord</p>
+                            <p class="node-time" data-translate="edu3-period">2021 - 2024</p>
+                            <p class="node-text" data-translate="edu3-desc">Hier heb ik de basis gelegd: netwerken configureren, servers opzetten, troubleshooten. Tijdens mijn stage heb ik het datacenter van mijn school opgezet, wat echt veel ervaring heeft opgeleverd.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content glass-card">
-                            <div class="timeline-icon">
+                    <div class="edu-node">
+                        <div class="node-dot"></div>
+                        <div class="node-box glass-card">
+                            <div class="node-icon">
                                 <i class="fas fa-tools"></i>
                             </div>
-                            <div class="timeline-badge completed" data-translate="completed">Afgerond</div>
-                            <h3 class="timeline-title">MBO-2 | Monteur Elektrotechnische Installaties</h3>
-                            <p class="timeline-school">ROC Friesepoort te Emmeloord</p>
-                            <p class="timeline-period" data-translate="edu4-period">2019 - 2021</p>
-                            <p class="timeline-desc" data-translate="edu4-desc">Gespecialiseerd in het installeren en monteren van elektrotechnische benodigdheden. Fundamentele kennis van hardware en infrastructuur.</p>
+                            <div class="node-status status-done" data-translate="completed">Afgerond</div>
+                            <h3 class="node-title">MBO-2 | Monteur Elektrotechnische Installaties</h3>
+                            <p class="node-place">ROC Friesepoort te Emmeloord</p>
+                            <p class="node-time" data-translate="edu4-period">2019 - 2021</p>
+                            <p class="node-text" data-translate="edu4-desc">Gespecialiseerd in het installeren en monteren van elektrotechnische benodigdheden. Fundamentele kennis van hardware en infrastructuur.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="content-section skills-section">
-                <div class="section-header">
-                    <div class="section-icon">
+            <section id="skills" class="skills reveal">
+                <div class="section-top">
+                    <div class="icon-wrap">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h2 class="section-title" data-translate="skills">Vaardigheden & Expertise</h2>
+                    <h2 class="title" data-translate="skills">Vaardigheden & Expertise</h2>
                 </div>
                 
-                <div class="skills-categories">
-                    <!-- Security Skills -->
-                    <div class="skill-category">
-                        <h3 class="category-title" data-translate="cat-security">
+                <div class="skills-wrap">
+                    <div class="skills-group">
+                        <h3 class="group-label" data-translate="cat-security">
                             Security & Hacking
                         </h3>
-                        <div class="skills-grid">
-                            <div class="skill-card">
-                                <div class="skill-icon">
+                        <div class="skills-flow">
+                            <div class="skill-item">
+                                <div class="item-icon">
                                     <i class="fas fa-network-wired"></i>
                                 </div>
-                                <h4 class="skill-name" data-translate="skill-network">Network Security</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" style="--skill-level: 65%"></div>
+                                <h4 class="item-name" data-translate="skill-network">Network Security</h4>
+                                <div class="item-meter">
+                                    <div class="meter-fill" style="--skill-level: 65%"></div>
                                 </div>
                             </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">
+                            <div class="skill-item">
+                                <div class="item-icon">
                                     <i class="fas fa-shield-alt"></i>
                                 </div>
-                                <h4 class="skill-name" data-translate="skill-security">Cybersecurity</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" style="--skill-level: 40%"></div>
+                                <h4 class="item-name" data-translate="skill-security">Cybersecurity</h4>
+                                <div class="item-meter">
+                                    <div class="meter-fill" style="--skill-level: 40%"></div>
                                 </div>
                             </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">
+                            <div class="skill-item">
+                                <div class="item-icon">
                                     <i class="fas fa-bug"></i>
                                 </div>
-                                <h4 class="skill-name" data-translate="skill-pentest">Penetration Testing</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" style="--skill-level: 30%"></div>
+                                <h4 class="item-name" data-translate="skill-pentest">Penetration Testing</h4>
+                                <div class="item-meter">
+                                    <div class="meter-fill" style="--skill-level: 30%"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Technical Skills -->
-                    <div class="skill-category">
-                        <h3 class="category-title" data-translate="cat-tech">
+                    <div class="skills-group">
+                        <h3 class="group-label" data-translate="cat-tech">
                             Technische Skills
                         </h3>
-                        <div class="skills-grid">
-                            <div class="skill-card">
-                                <div class="skill-icon">
+                        <div class="skills-flow">
+                            <div class="skill-item">
+                                <div class="item-icon">
                                     <i class="fab fa-linux"></i>
                                 </div>
-                                <h4 class="skill-name">Linux</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" style="--skill-level: 75%"></div>
+                                <h4 class="item-name">Linux</h4>
+                                <div class="item-meter">
+                                    <div class="meter-fill" style="--skill-level: 75%"></div>
                                 </div>
                             </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">
+                            <div class="skill-item">
+                                <div class="item-icon">
                                     <i class="fab fa-python"></i>
                                 </div>
-                                <h4 class="skill-name">Python</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" style="--skill-level: 50%"></div>
+                                <h4 class="item-name">Python</h4>
+                                <div class="item-meter">
+                                    <div class="meter-fill" style="--skill-level: 50%"></div>
                                 </div>
                             </div>
-                            <div class="skill-card">
-                                <div class="skill-icon">
+                            <div class="skill-item">
+                                <div class="item-icon">
                                     <i class="fas fa-database"></i>
                                 </div>
-                                <h4 class="skill-name">SQL</h4>
-                                <div class="skill-level">
-                                    <div class="skill-bar" style="--skill-level: 45%"></div>
+                                <h4 class="item-name">SQL</h4>
+                                <div class="item-meter">
+                                    <div class="meter-fill" style="--skill-level: 45%"></div>
                                 </div>
                             </div>
                         </div>
@@ -331,39 +316,34 @@
                 </div>
             </section>
 
-            <!-- Certificates Section -->
-            <section id="certificates" class="content-section certificates-section">
-
-                <div class="section-header">
-                    <div class="section-icon">
+            <section id="certificates" class="certs reveal">
+                <div class="section-top">
+                    <div class="icon-wrap">
                         <i class="fas fa-certificate"></i>
                     </div>
-                    <h2 class="section-title" data-translate="certificates">Certificaten</h2>
+                    <h2 class="title" data-translate="certificates">Certificaten</h2>
                 </div>
 
-                <div class="certificates-grid">
-
-                    <!-- VCA Certificate -->
-                    <div class="certificate-card glass-card">
-                        <div class="certificate-icon">
+                <div class="certs-grid">
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon">
                             <i class="fas fa-hard-hat"></i>
                         </div>
-                        <div class="certificate-content">
-                            <h3 class="certificate-name">VCA</h3>
-                            <p class="certificate-issuer" data-translate="cert-vca-issuer">Veiligheid, Gezondheid en Milieu</p>
-                            <p class="certificate-desc" data-translate="cert-vca-desc">Officieel veiligheidscertificaat voor werken in risicovolle omgevingen</p>
+                        <div class="cert-body">
+                            <h3 class="cert-name">VCA</h3>
+                            <p class="cert-org" data-translate="cert-vca-issuer">Veiligheid, Gezondheid en Milieu</p>
+                            <p class="cert-text" data-translate="cert-vca-desc">Officieel veiligheidscertificaat voor werken in risicovolle omgevingen</p>
                         </div>
                     </div>
 
-                    <!-- Certified Secure Certificates -->
-                    <div class="certificate-card glass-card featured-cert">
-                        <div class="certificate-icon">
+                    <div class="cert-card glass-card cert-featured">
+                        <div class="cert-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div class="certificate-content">
-                            <h3 class="certificate-name" data-translate="cert-featured">Certified Secure</h3>
-                            <p class="certificate-issuer" data-translate="cert-featured">Certified Secure</p>
-                            <ul class="certificate-modules">
+                        <div class="cert-body">
+                            <h3 class="cert-name" data-translate="cert-featured">Certified Secure</h3>
+                            <p class="cert-org" data-translate="cert-featured">Certified Secure</p>
+                            <ul class="cert-list">
                                 <li><i class="fas fa-check"></i> <span data-translate="cert-sec-essentials">Essentials Security</span></li>
                                 <li><i class="fas fa-check"></i> <span data-translate="cert-sec-specialist">Security Specialist</span></li>
                                 <li><i class="fas fa-check"></i> <span data-translate="cert-sec-server">Server Security Specialist</span></li>
@@ -372,96 +352,106 @@
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </section>
-            <!-- Projects Section -->
-            <section id="projects" class="content-section projects-section">
-                <div class="section-header">
-                    <div class="section-icon">
+            <section id="projects" class="work reveal">
+                <div class="section-top">
+                    <div class="icon-wrap">
                         <i class="fas fa-project-diagram"></i>
                     </div>
-                    <h2 class="section-title" data-translate="projects">Projecten & Realisaties</h2>
+                    <h2 class="title" data-translate="projects">Projecten & Realisaties</h2>
                 </div>
-                <div class="projects-grid">
-                    <article class="project-card glass-card featured">
-                        <div class="project-header">
-                            <div class="project-icon-large">
+                <div class="work-grid">
+                    <article class="glass-card work-item featured">
+                        <div class="work-head">
+                            <div class="work-icon">
                                 <i class="fas fa-server"></i>
                             </div>
-                            <h3 class="project-title" data-translate="project1-title">School Datacenter Implementatie</h3>
+                            <h3 class="work-title" data-translate="project1-title">School Datacenter Implementatie</h3>
                         </div>
-                        <p class="project-description" data-translate="project1-desc">
+                        <p class="work-desc" data-translate="project1-desc">
                             Tijdens mijn laatste half jaar op het MBO mocht ik het nieuwe datacenter voor school opzetten. Van kabels trekken tot servers configureren - het was echt tof om te zien hoe alles tot leven kwam. Heb veel geleerd over netwerken, servers en vooral over problemen oplossen.
                         </p>
-                        <div class="project-details">
-                            <div class="project-detail">
+                        
+                        <div class="work-case-study" id="case-1" style="display:none; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+                            <p class="node-text" data-translate="project1-case"></p>
+                        </div>
+
+                        <div class="work-meta">
+                            <div class="meta-item">
                                 <i class="fas fa-calendar"></i>
                                 <span>6 maanden</span>
                             </div>
-                            <div class="project-detail">
+                            <div class="meta-item">
                                 <i class="fas fa-users"></i>
                                 <span data-translate="solo">Solo project</span>
                             </div>
                         </div>
-                        <div class="project-tags">
-                            <span class="tag">Networking</span>
-                            <span class="tag">Infrastructure</span>
-                            <span class="tag">Security</span>
+                        <div class="work-tags">
+                            <span class="pill">Networking</span>
+                            <span class="pill">Infrastructure</span>
+                            <span class="pill">Security</span>
+                        </div>
+                        <div class="work-actions" style="margin-top: 1.5rem;">
+                            <button class="btn btn-outline btn-sm" onclick="toggleCase('case-1', this)">
+                                <span data-translate="read-case">Lees Case Study</span>
+                            </button>
                         </div>
                     </article>
 
-                    <article class="project-card glass-card upcoming">
-                        <div class="project-icon-large upcoming-icon">
-                            <i class="fas fa-hourglass-half"></i>
+                    <article class="glass-card work-item empty">
+                        <div class="work-icon">
+                            <i class="fab fa-github"></i>
                         </div>
-                        <h3 class="project-title" data-translate="upcoming">Meer projecten komen eraan...</h3>
-                        <p class="project-description" data-translate="upcoming-desc">
+                        <h3 class="work-title" data-translate="live-updates">Live GitHub Updates</h3>
+                        <p class="work-desc" data-translate="upcoming-desc">
                             Ik werk momenteel aan verschillende security en development projecten. Deze publiceer ik onder <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check binnenkort terug voor updates!
                         </p>
+                        <a href="https://github.com/IamKenii" target="_blank" class="btn btn-outline">
+                            <span>GitHub Profile</span>
+                        </a>
                     </article>
                 </div>
             </section>
 
-            <!-- Contact Section -->
-            <section id="contact" class="content-section contact-section">
-                <div class="section-header centered">
-                    <div class="section-icon">
+            <section id="contact" class="connect reveal">
+                <div class="section-top centered">
+                    <div class="icon-wrap">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <h2 class="section-title" data-translate="contact-title">Laten We Connecten</h2>
-                    <p class="section-subtitle" data-translate="contact-subtitle">
+                    <h2 class="title" data-translate="contact-title">Laten We Connecten</h2>
+                    <p class="subtitle" data-translate="contact-subtitle">
                         Ben je op zoek naar een gemotiveerde IT student voor een stage of project? Laten we connecten!
                     </p>
                 </div>
 
-                <div class="contact-grid">
-                    <div class="contact-card glass-card">
-                        <div class="contact-icon">
+                <div class="connect-links">
+                    <div class="connect-card glass-card">
+                        <div class="connect-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3 data-translate="email">Email</h3>
-                        <a href="mailto:henryelsinga@hotmail.nl" class="contact-link">henryelsinga@hotmail.nl</a>
+                        <a href="mailto:henryelsinga@hotmail.nl" class="connect-link">henryelsinga@hotmail.nl</a>
                     </div>
 
-                    <div class="contact-card glass-card">
-                        <div class="contact-icon">
+                    <div class="connect-card glass-card">
+                        <div class="connect-icon">
                             <i class="fab fa-linkedin"></i>
                         </div>
                         <h3>LinkedIn</h3>
-                        <a href="https://www.linkedin.com/in/henry-elsinga-b811a8236/" target="_blank" class="contact-link">Henry Elsinga</a>
+                        <a href="https://www.linkedin.com/in/henry-elsinga-b811a8236/" target="_blank" class="connect-link">Henry Elsinga</a>
                     </div>
 
-                    <div class="contact-card glass-card">
-                        <div class="contact-icon">
+                    <div class="connect-card glass-card">
+                        <div class="connect-icon">
                             <i class="fab fa-github"></i>
                         </div>
                         <h3>GitHub</h3>
-                        <a href="https://github.com/IamKenii" target="_blank" class="contact-link">@IamKenii</a>
+                        <a href="https://github.com/IamKenii" target="_blank" class="connect-link">@IamKenii</a>
                     </div>
                 </div>
 
-                <div class="cta-section glass-card">
+                <div class="contact-cta glass-card">
                     <h3 data-translate="cta-title">Klaar om te praten?</h3>
                     <p data-translate="cta-text">Of je nu een vraag hebt, een project wilt bespreken, of gewoon wilt netwerken - ik hoor graag van je!</p>
                     <a href="mailto:henryelsinga@hotmail.nl" class="btn btn-primary btn-large">
@@ -471,18 +461,14 @@
                 </div>
             </section>
 
+            <footer class="portfolio-footer">
+                <p>&copy; 2026 Henry Elsinga. <span data-translate="footer">Gebouwd met passie voor cybersecurity.</span></p>
+                <div class="footer-links">
+                    <a href="#home" data-translate="back-top">Terug naar boven</a>
+                </div>
+            </footer>
         </main>
     </div>
-
-    <!-- Footer -->
-    <footer class="portfolio-footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Henry Elsinga. <span data-translate="footer">Gebouwd met passie voor cybersecurity.</span></p>
-            <div class="footer-links">
-                <a href="#home" data-translate="back-top">Terug naar boven</a>
-            </div>
-        </div>
-    </footer>
 
     <script src="./assets/js/script.js"></script>
 </body>

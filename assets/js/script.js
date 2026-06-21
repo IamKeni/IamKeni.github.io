@@ -71,7 +71,11 @@ const translations = {
         'featured': 'Featured',
         'project1-title': 'School Datacenter Implementatie',
         'project1-desc': 'Tijdens mijn laatste half jaar op het MBO mocht ik het nieuwe datacenter voor school opzetten. Van kabels trekken tot servers configureren - het was echt tof om te zien hoe alles tot leven kwam. Heb veel geleerd over netwerken, servers en vooral over problemen oplossen.',
+        'project1-case': '<strong>De Uitdaging:</strong> Het vervangen van een verouderde serverruimte door een modern, energie-efficiënt datacenter dat voldoet aan huidige security-standaarden.<br><br><strong>Mijn Aanpak:</strong> Ik begon met het ontwerpen van het rack-layout en de bekabeling (structured cabling). Daarna heb ik de fysieke installatie gedaan van switches en servers, gevolgd door de configuratie van VLANs en firewall-regels om de netwerksegmentatie te waarborgen.',
         'solo': 'Solo project',
+        'read-case': 'Lees Case Study',
+        'close-case': 'Sluiten',
+        'live-updates': 'Live GitHub Updates',
         'upcoming': 'Meer projecten komen eraan...',
         'upcoming-desc': 'Ik werk momenteel aan verschillende security en development projecten. Deze publiceer ik onder <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check binnenkort terug voor updates!',
         
@@ -158,8 +162,11 @@ const translations = {
         'project1-title': 'School Datacenter Implementation',
         'project1-desc':
         'During my final semester at MBO, I designed and implemented a new datacenter for my school. From structured cabling to server configuration, this project provided extensive experience in infrastructure, networking and problem-solving.',
-        
+        'project1-case': '<strong>The Challenge:</strong> Replacing an outdated server room with a modern, energy-efficient datacenter that meets current security standards.<br><br><strong>My Approach:</strong> I started by designing the rack layout and structured cabling. Following that, I performed the physical installation of switches and servers, and configured VLANs and firewall rules to ensure proper network segmentation.',
         'solo': 'Solo project',
+        'read-case': 'Read Case Study',
+        'close-case': 'Close',
+        'live-updates': 'Live GitHub Updates',
         'upcoming': 'More projects coming soon...',
         'upcoming-desc': 'I am currently working on several cloud, security and development projects. These are published under <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check back soon for updates!',
         
@@ -180,134 +187,112 @@ const translations = {
 
 };
 
-// ========================================
-// State Management
-// ========================================
+// Instellingen bijhouden
 let currentLanguage = 'nl';
 let currentTheme = 'dark';
 
-// ========================================
-// Theme Toggle
-// ========================================
+// Wisselen tussen donker en licht thema
 function toggleTheme() {
     const body = document.body;
     const themeIcon = document.getElementById('theme-icon');
 
-    // Add theme-switching class to disable transitions on skills section only
     body.classList.add('theme-switching');
 
     if (currentTheme === 'light') {
         body.setAttribute('data-theme', 'dark');
         themeIcon.className = 'fas fa-sun';
         currentTheme = 'dark';
-        localStorage.setItem('theme', 'dark');
     } else {
         body.setAttribute('data-theme', 'light');
         themeIcon.className = 'fas fa-moon';
         currentTheme = 'light';
-        localStorage.setItem('theme', 'light');
     }
+    
+    localStorage.setItem('theme', currentTheme);
 
-    // Remove theme-switching class after theme change completes
     setTimeout(() => {
         body.classList.remove('theme-switching');
-    }, 50);
+    }, 300);
 }
 
-// ========================================
-// Language Change
-// ========================================
+// Case study in/uitklappen
+function toggleCase(caseId, btn) {
+    const caseElement = document.getElementById(caseId);
+    const isVisible = caseElement.style.display !== 'none';
+    const span = btn.querySelector('span');
+    
+    if (isVisible) {
+        caseElement.style.display = 'none';
+        span.setAttribute('data-translate', 'read-case');
+    } else {
+        caseElement.style.display = 'block';
+        span.setAttribute('data-translate', 'close-case');
+        
+        // Scroll even naar de case study als hij openklapt op mobiel
+        if (window.innerWidth < 768) {
+            caseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    }
+    
+    // Update de tekst direct op basis van de huidige taal
+    const key = span.getAttribute('data-translate');
+    span.textContent = translations[currentLanguage][key];
+}
+
+// Taal aanpassen (NL/EN)
 function changeLanguage(lang) {
     currentLanguage = lang;
 
-    // Update active language button
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
-        }
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
     });
 
-    // Update all translatable elements
-    document.querySelectorAll('[data-translate]').forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[lang] && translations[lang][key]) {
-            const htmlKeys = ["about-text3", "upcoming-desc"];
-            if (htmlKeys.includes(key)) {
-                element.innerHTML = translations[lang][key];
+    document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        const translation = translations[lang]?.[key];
+        
+        if (translation) {
+            const isHTML = ["about-text3", "upcoming-desc", "project1-case"].includes(key);
+            if (isHTML) {
+                el.innerHTML = translation;
             } else {
-                element.textContent = translations[lang][key];
+                el.textContent = translation;
             }
         }
     });
 
-    // Update HTML lang attribute
     document.documentElement.lang = lang;
-
-    // Save preference
     localStorage.setItem('language', lang);
 }
 
-// ========================================
-// Intersection Observer for Scroll Animations
-// ========================================
+// Animaties als je naar beneden scrollt
 function setupIntersectionObserver() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('active');
                 observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
-
-    // Observe all content sections
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'all 0.8s ease';
-        observer.observe(section);
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
     });
 
-    // Observe skill cards
-    const skillCards = document.querySelectorAll('.skill-card');
-    skillCards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = `all 0.6s ease ${index * 0.1}s`;
-        observer.observe(card);
-    });
-
-    // Observe timeline items
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateX(-30px)';
-        item.style.transition = `all 0.6s ease ${index * 0.15}s`;
-        observer.observe(item);
+    document.querySelectorAll('.reveal').forEach(el => {
+        observer.observe(el);
     });
 }
 
-// ========================================
-// Smooth Scroll
-// ========================================
+// Soepel scrollen naar secties
 function setupSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                const offset = 80; // Account for fixed nav
-                const targetPosition = target.offsetTop - offset;
                 window.scrollTo({
-                    top: targetPosition,
+                    top: target.offsetTop - 80,
                     behavior: 'smooth'
                 });
             }
@@ -315,262 +300,109 @@ function setupSmoothScroll() {
     });
 }
 
-// ========================================
-// Parallax Effect for Background Orbs
-// ========================================
+// Parallax effect voor de achtergrond orbs
 function setupParallax() {
-    let ticking = false;
-
     window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                const scrolled = window.pageYOffset;
-                const orbs = document.querySelectorAll('.orb');
-                
-                orbs.forEach((orb, index) => {
-                    const speed = 0.3 + (index * 0.1);
-                    const yPos = -(scrolled * speed);
-                    orb.style.transform = `translateY(${yPos}px)`;
-                });
-
-                ticking = false;
-            });
-
-            ticking = true;
-        }
+        const scrolled = window.pageYOffset;
+        document.querySelectorAll('.orb').forEach((orb, index) => {
+            const speed = 0.3 + (index * 0.1);
+            orb.style.transform = `translateY(${-(scrolled * speed)}px)`;
+        });
     });
 }
 
-// ========================================
-// Active Navigation Link
-// ========================================
+// Actieve link in de navigatie bijhouden
 function setupActiveNav() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
     window.addEventListener('scroll', () => {
         let current = '';
-        
         sections.forEach(section => {
             const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (window.pageYOffset >= sectionTop && 
-                window.pageYOffset < sectionTop + sectionHeight) {
+            if (window.pageYOffset >= sectionTop) {
                 current = section.getAttribute('id');
             }
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
+            link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
         });
     });
 }
 
-// ========================================
-// Counter Animation for Stats
-// ========================================
+// Getallen laten oplopen (bijv. jaren ervaring)
 function animateCounters() {
-    const counters = document.querySelectorAll('.stat-number');
-    
-    counters.forEach(counter => {
-        const target = parseInt(counter.textContent);
-        const duration = 2000;
-        const increment = target / (duration / 16);
+    document.querySelectorAll('.stat-val').forEach(counter => {
+        const text = counter.textContent;
+        const target = parseInt(text);
+        if (isNaN(target)) return;
+        
+        const suffix = text.replace(/[0-9]/g, '');
         let current = 0;
+        const duration = 2000; // 2 seconden
+        const startTime = performance.now();
 
-        const updateCounter = () => {
-            current += increment;
-            if (current < target) {
-                counter.textContent = Math.ceil(current) + '+';
+        const updateCounter = (now) => {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Ease out quad effect
+            const easeProgress = progress * (2 - progress);
+            current = Math.floor(easeProgress * target);
+            
+            counter.textContent = current + suffix;
+
+            if (progress < 1) {
                 requestAnimationFrame(updateCounter);
             } else {
-                counter.textContent = target + '+';
+                counter.textContent = target + suffix;
             }
         };
 
-        // Start animation when element is in view
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver(entries => {
             if (entries[0].isIntersecting) {
-                updateCounter();
+                requestAnimationFrame(updateCounter);
                 observer.disconnect();
             }
         });
-
         observer.observe(counter);
     });
 }
 
-// ========================================
-// Typing Effect for Hero Title
-// ========================================
-function typeWriter(element, text, speed = 80) {
-    let i = 0;
-    element.style.opacity = '1';
-    const originalHTML = element.innerHTML;
-    element.innerHTML = '';
-
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-
-    type();
-}
-
-// ========================================
-// Load Preferences
-// ========================================
+// Voorkeuren laden (taal/thema)
 function loadPreferences() {
-    // Load theme preference
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        toggleTheme();
-    } else if (!savedTheme) {
-        // Dark is default — no toggle needed
-    }
+    if (savedTheme === 'light') toggleTheme();
 
-    // Load language preference
     const savedLanguage = localStorage.getItem('language');
     if (savedLanguage && savedLanguage !== currentLanguage) {
         changeLanguage(savedLanguage);
     }
 }
 
-// ========================================
-// Keyboard Navigation
-// ========================================
-function setupKeyboardNavigation() {
-    document.addEventListener('keydown', (e) => {
-        // Toggle theme with 't' key
-        if (e.key === 't' || e.key === 'T') {
-            e.preventDefault();
-            toggleTheme();
-        }
-
-        // Switch language with 'l' key
-        if (e.key === 'l' || e.key === 'L') {
-            e.preventDefault();
-            const newLang = currentLanguage === 'nl' ? 'en' : 'nl';
-            changeLanguage(newLang);
-        }
-
-        // Escape key to scroll to top
-        if (e.key === 'Escape') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    });
-}
-
-// ========================================
-// Performance Optimization
-// ========================================
-function optimizePerformance() {
-    // Debounce resize events
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-            // Handle resize if needed
-        }, 250);
-    });
-
-    // Lazy load images
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    if (img.dataset.src) {
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                    }
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-
-        document.querySelectorAll('img[data-src]').forEach(img => {
-            imageObserver.observe(img);
-        });
-    }
-}
-
-// ========================================
-// Navigation Scroll Effect
-// ========================================
+// Navigatie schaduw bij scrollen
 function setupNavScroll() {
     const nav = document.querySelector('.main-nav');
-    let lastScroll = 0;
-
     window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            nav.style.boxShadow = 'var(--shadow-lg)';
-        } else {
-            nav.style.boxShadow = 'none';
-        }
-
-        lastScroll = currentScroll;
+        nav.style.boxShadow = window.pageYOffset > 100 ? 'var(--shadow-lg)' : 'none';
     });
 }
 
-// ========================================
-// Initialize Everything
-// ========================================
+// Alles opstarten als de pagina geladen is
 document.addEventListener('DOMContentLoaded', () => {
-    // Load user preferences
     loadPreferences();
-
-    // Setup all interactions
     setupIntersectionObserver();
     setupSmoothScroll();
     setupParallax();
     setupActiveNav();
-    setupKeyboardNavigation();
     setupNavScroll();
-    optimizePerformance();
-
-    // Animate counters
     animateCounters();
-
-    // Optional: Add typing effect to name
-    const nameHighlight = document.querySelector('.name-highlight');
-    if (nameHighlight) {
-        setTimeout(() => {
-            const text = nameHighlight.textContent;
-            typeWriter(nameHighlight, text, 100);
-        }, 500);
-    }
-
-    // Add loaded class to body for animations
+    
     document.body.classList.add('loaded');
 });
 
-// ========================================
-// Page Visibility API
-// ========================================
-document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-        document.body.classList.add('paused');
-    } else {
-        document.body.classList.remove('paused');
-    }
-});
-
-// ========================================
-// Export for testing
-// ========================================
+// Exporteren voor eventuele tests
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        toggleTheme,
-        changeLanguage,
-        translations
-    };
+    module.exports = { toggleTheme, changeLanguage, translations };
 }
