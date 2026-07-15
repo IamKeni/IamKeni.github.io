@@ -71,13 +71,11 @@ const translations = {
         'featured': 'Featured',
         'project1-title': 'School Datacenter Implementatie',
         'project1-desc': 'Tijdens mijn laatste half jaar op het MBO mocht ik het nieuwe datacenter voor school opzetten. Van kabels trekken tot servers configureren - het was echt tof om te zien hoe alles tot leven kwam. Heb veel geleerd over netwerken, servers en vooral over problemen oplossen.',
+        // TODO: vul hier de echte merken/modellen switches, VLAN-schema en firewall in
         'project1-case': '<strong>De Uitdaging:</strong> Het vervangen van een verouderde serverruimte door een modern, energie-efficiënt datacenter dat voldoet aan huidige security-standaarden.<br><br><strong>Mijn Aanpak:</strong> Ik begon met het ontwerpen van het rack-layout en de bekabeling (structured cabling). Daarna heb ik de fysieke installatie gedaan van switches en servers, gevolgd door de configuratie van VLANs en firewall-regels om de netwerksegmentatie te waarborgen.',
         'solo': 'Solo project',
-        'read-case': 'Lees Case Study',
-        'close-case': 'Sluiten',
-        'live-updates': 'Live GitHub Updates',
-        'upcoming': 'Meer projecten komen eraan...',
-        'upcoming-desc': 'Ik werk momenteel aan verschillende security en development projecten. Deze publiceer ik onder <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check binnenkort terug voor updates!',
+        'project2-title': 'Homelab Temperatuurmonitoring',
+        'project2-desc': 'Eigen self-hosted monitoring setup voor mijn homelab: DHT11-sensoren lezen temperatuur en luchtvochtigheid uit, de data komt binnen op een Proxmox-omgeving en wordt live weergegeven in een dashboard. Volledig zelf opgezet, van sensor tot dashboard.',
         
         // Contact
         'contact-title': 'Laten We Connecten',
@@ -164,11 +162,8 @@ const translations = {
         'During my final semester at MBO, I designed and implemented a new datacenter for my school. From structured cabling to server configuration, this project provided extensive experience in infrastructure, networking and problem-solving.',
         'project1-case': '<strong>The Challenge:</strong> Replacing an outdated server room with a modern, energy-efficient datacenter that meets current security standards.<br><br><strong>My Approach:</strong> I started by designing the rack layout and structured cabling. Following that, I performed the physical installation of switches and servers, and configured VLANs and firewall rules to ensure proper network segmentation.',
         'solo': 'Solo project',
-        'read-case': 'Read Case Study',
-        'close-case': 'Close',
-        'live-updates': 'Live GitHub Updates',
-        'upcoming': 'More projects coming soon...',
-        'upcoming-desc': 'I am currently working on several cloud, security and development projects. These are published under <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check back soon for updates!',
+        'project2-title': 'Homelab Temperature Monitoring',
+        'project2-desc': 'A self-hosted monitoring setup for my homelab: DHT11 sensors read temperature and humidity, the data flows into a Proxmox environment and is displayed live on a dashboard. Built entirely from scratch, from sensor to dashboard.',
         
         // Contact
         'contact-title': 'Let\'s Connect',
@@ -213,30 +208,6 @@ function toggleTheme() {
     setTimeout(() => {
         body.classList.remove('theme-switching');
     }, 300);
-}
-
-// Case study in/uitklappen
-function toggleCase(caseId, btn) {
-    const caseElement = document.getElementById(caseId);
-    const isVisible = caseElement.style.display !== 'none';
-    const span = btn.querySelector('span');
-    
-    if (isVisible) {
-        caseElement.style.display = 'none';
-        span.setAttribute('data-translate', 'read-case');
-    } else {
-        caseElement.style.display = 'block';
-        span.setAttribute('data-translate', 'close-case');
-        
-        // Scroll even naar de case study als hij openklapt op mobiel
-        if (window.innerWidth < 768) {
-            caseElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-    }
-    
-    // Update de tekst direct op basis van de huidige taal
-    const key = span.getAttribute('data-translate');
-    span.textContent = translations[currentLanguage][key];
 }
 
 // Taal aanpassen (NL/EN)
@@ -389,7 +360,7 @@ function setupNavScroll() {
     });
 }
 
-// Alles opstarten als de pagina geladen is
+
 document.addEventListener('DOMContentLoaded', () => {
     loadPreferences();
     setupIntersectionObserver();
@@ -398,11 +369,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setupActiveNav();
     setupNavScroll();
     animateCounters();
-    
+
     document.body.classList.add('loaded');
 });
-
-// Exporteren voor eventuele tests
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { toggleTheme, changeLanguage, translations };
-}

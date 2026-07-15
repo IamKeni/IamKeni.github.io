@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henry Elsinga - Cloud & Security Engineer</title>
     <meta name="description" content="HBO-ICT student gespecialiseerd in cybersecurity, ethical hacking en cloud security. Beschikbaar voor stages en projecten.">
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg">
+
+    <meta property="og:title" content="Henry Elsinga - Cloud & Security Engineer">
+    <meta property="og:description" content="HBO-ICT student gespecialiseerd in cybersecurity, ethical hacking en cloud security. Beschikbaar voor stages en projecten.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://henryelsinga.nl">
+    <meta property="og:image" content="https://henryelsinga.nl/assets/img/unnamed.png">
+    <meta name="twitter:card" content="summary">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -392,24 +400,33 @@
                             <span class="pill">Infrastructure</span>
                             <span class="pill">Security</span>
                         </div>
-                        <div class="work-actions" style="margin-top: 1.5rem;">
-                            <button class="btn btn-outline btn-sm" onclick="toggleCase('case-1', this)">
-                                <span data-translate="read-case">Lees Case Study</span>
-                            </button>
-                        </div>
                     </article>
 
-                    <article class="glass-card work-item empty">
-                        <div class="work-icon">
-                            <i class="fab fa-github"></i>
+                    <article class="glass-card work-item">
+                        <div class="work-head">
+                            <div class="work-icon">
+                                <i class="fas fa-thermometer-half"></i>
+                            </div>
+                            <h3 class="work-title" data-translate="project2-title">Homelab Temperatuurmonitoring</h3>
                         </div>
-                        <h3 class="work-title" data-translate="live-updates">Live GitHub Updates</h3>
-                        <p class="work-desc" data-translate="upcoming-desc">
-                            Ik werk momenteel aan verschillende security en development projecten. Deze publiceer ik onder <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a> — check binnenkort terug voor updates!
+                        <p class="work-desc" data-translate="project2-desc">
+                            Eigen self-hosted monitoring setup voor mijn homelab: DHT11-sensoren lezen temperatuur en luchtvochtigheid uit, de data komt binnen op een Proxmox-omgeving en wordt live weergegeven in een dashboard. Volledig zelf opgezet, van sensor tot dashboard.
                         </p>
-                        <a href="https://github.com/IamKenii" target="_blank" class="btn btn-outline">
-                            <span>GitHub Profile</span>
-                        </a>
+                        <div class="work-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-server"></i>
+                                <span>Proxmox</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span data-translate="solo">Solo project</span>
+                            </div>
+                        </div>
+                        <div class="work-tags">
+                            <span class="pill">Self-hosted</span>
+                            <span class="pill">Monitoring</span>
+                            <span class="pill">Homelab</span>
+                        </div>
                     </article>
                 </div>
             </section>

@@ -39,10 +39,10 @@
 }
 
 [data-theme="dark"] {
-    --bg:           #121214;
-    --bg-card:      #1a1a1e;
-    --bg-subtle:    #222228;
-    --bg-muted:     #2a2a32;
+    --bg:           #14181f;
+    --bg-card:      #1c212b;
+    --bg-subtle:    #232a35;
+    --bg-muted:     #2b3340;
 
     --text-primary:   #e1e1e6;
     --text-secondary: #a0a0a5;
@@ -330,6 +330,7 @@ body.theme-switching * {
     font-family: var(--font-serif); font-size: 1.35rem;
     font-weight: 400; margin-bottom: 0.3rem;
 }
+
 .profile-meta p { color: var(--accent); font-size: 0.85rem; font-weight: 500; margin-bottom: 1rem; }
 .profile-loc {
     display: inline-flex; align-items: center; gap: 0.4rem;
