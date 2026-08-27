@@ -7,9 +7,9 @@ const translations = {
         'available': 'Beschikbaar voor projecten',
         'hi': 'Hoi, ik ben',
         'hero-subtitle': 'HBO-ICT student Cloud & Security Engineering met een sterke basis in elektrotechniek en IT-infrastructuur. Ervaring met Windows, Linux, Cisco- en UniFi-netwerken en security. Gericht op het ontwerpen en beveiligen van betrouwbare (cloud)omgevingen.',
-        'stat1': 'Jaar IT Ervaring',
-        'stat2': 'Technische Skills',
-        'stat3': 'Leergierig',
+        'stat1': 'Grote Projecten',
+        'stat2': 'Certificaten',
+        'stat3': 'Jaar Praktijkervaring',
         'cta-contact': 'Neem Contact Op',
         'cta-work': 'Bekijk Werk',
         'profile-role': 'Cloud & Security Student',
@@ -20,8 +20,8 @@ const translations = {
         // About
         'about': 'Over Mij',
         'about-text': 'Ik ben Henry, HBO-ICT student Cloud & Security Engineering aan Windesheim. Mijn achtergrond ligt in zowel elektrotechniek als IT-infrastructuur, waardoor ik systemen begrijp van fysieke installatie tot cloudomgeving.',
-        'about-text2': 'Tijdens mijn MBO-opleidingen heb ik gewerkt met Windows, Linux, Cisco en netwerk- en securityoplossingen. Ik combineer praktijkervaring met een security-first mindset.',
-        'about-text3': 'Ik ben nog volop aan het leren, maar elke dag word ik beter. Mijn focus ligt op cloud computing, hybride infrastructuren en het beveiligen van informatiesystemen binnen moderne omgevingen. Daarnaast verdiep ik mij actief in de wereld van cybersecurity. De software en tools die ik bouw publiceer ik onder de naam <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a>.',
+        'about-text2': 'Tijdens mijn MBO-opleidingen heb ik gewerkt met Windows, Linux, Cisco en verschillende netwerk- en securityoplossingen. Ik begon met kabels trekken en stopcontacten aansluiten tijdens mijn elektrotechniek-opleiding, en die gewoonte om eerst het fysieke te snappen voordat je iets beveiligt, zit nog steeds in hoe ik naar systemen kijk.',
+        'about-text3': 'Op dit moment ben ik bezig met Proxmox en netwerksegmentatie in mijn homelab, en duik ik steeds dieper in cloud computing en hybride infrastructuren. Mijn focus ligt op het beveiligen van informatiesystemen binnen moderne omgevingen. De software en tools die ik bouw publiceer ik onder de naam <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a>.',
         'highlights': 'Wat ik kan',
         'highlight1': 'HBO-ICT student (2de jaar)',
         'highlight2': 'Datacenter opgebouwd (MBO Keuzedeel project)',
@@ -86,7 +86,7 @@ const translations = {
         'send-message': 'Stuur Een Bericht',
         
         // Footer
-        'footer': 'Gebouwd met passie voor cloud en security.',
+        'footer': 'Gebouwd tussen colleges en koffie door.',
         'back-top': 'Terug naar boven'
     },
     en: {
@@ -94,9 +94,9 @@ const translations = {
         'available': 'Available for projects',
         'hi': 'Hi, I\'m',
         'hero-subtitle': 'HBO-ICT student in Cloud & Security Engineering with a strong foundation in electrical engineering and IT infrastructure. Experienced with Windows, Linux, Cisco and UniFi networks, and security. Focused on designing and securing reliable (cloud) environments.',
-        'stat1': 'Years of IT Experience',
-        'stat2': 'Technical Skills',
-        'stat3': 'Eager to Learn',
+        'stat1': 'Major Projects',
+        'stat2': 'Certificates',
+        'stat3': 'Years of Practical Experience',
         'cta-contact': 'Get In Touch',
         'cta-work': 'View Work',
         'profile-role': 'Cloud & Security Student',
@@ -107,8 +107,8 @@ const translations = {
         // About
         'about': 'About Me',
         'about-text': 'I\'m Henry, an HBO-ICT Cloud & Security Engineering student at Windesheim. My background lies in both electrical engineering and IT infrastructure, allowing me to understand systems from physical installation to cloud environments.',
-        'about-text2': 'During my MBO programs, I worked extensively with Windows, Linux, Cisco and network and security solutions. I combine hands-on experience with a security-first mindset.',
-        'about-text3': 'I am still learning a great deal, but I get better every day. My focus is on cloud computing, hybrid infrastructures, and securing information systems within modern environments. Additionally, I am actively immersing myself in the world of cybersecurity. I publish the software and tools I build under the name <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a>.',
+        'about-text2': 'During my MBO programs, I worked with Windows, Linux, Cisco, and various network and security solutions. I started out pulling cables and wiring outlets during my electrical engineering training, and that habit of understanding the physical side first before securing something has stuck with me ever since.',
+        'about-text3': 'Right now I\'m working with Proxmox and network segmentation in my homelab, and diving deeper into cloud computing and hybrid infrastructures. My focus is on securing information systems within modern environments. I publish the software and tools I build under the name <a href="https://ip.henryelsinga.nl" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:3px;">IamKenii Productions</a>.',
         'highlights': 'What I do',
         'highlight1': 'HBO-ICT student (2nd year)',
         'highlight2': 'Built a datacenter (MBO elective project)',
@@ -176,7 +176,7 @@ const translations = {
         'send-message': 'Send a Message',
         
         // Footer
-        'footer': 'Built with a passion for cloud and security.',
+        'footer': 'Built between lectures and coffee.',
         'back-top': 'Back to top'
     }
 
