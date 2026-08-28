@@ -32,7 +32,7 @@ body[data-theme="light"] {
 }
 
 body[data-theme="light"] .main-nav {
-    background: rgba(248, 247, 244, 0.85);
+    background: rgba(248, 247, 244, 0.9);
 }
 
 body[data-theme="light"] .theme-toggle,
@@ -162,12 +162,13 @@ body {
     width: calc(100% - 3rem);
     max-width: var(--max-width);
     z-index: 100;
-    background: rgba(20, 24, 31, 0.75);
+    background: rgba(20, 24, 31, 0.85);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid var(--border-card);
-    border-radius: 9999px;
+    border-radius: 24px;
     padding: 0.75rem 1.5rem;
+    transition: var(--transition);
 }
 
 .nav-content {
@@ -204,6 +205,16 @@ body {
 
 .nav-link-highlight {
     color: var(--accent-cyan);
+}
+
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
 }
 
 /* --- Fixed Controls --- */
@@ -465,7 +476,7 @@ body {
     margin: 0.5rem auto 0;
 }
 
-/* About Section */
+/* --- About Section --- */
 .about-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -475,7 +486,6 @@ body {
 
 .about-text-card {
     padding: 1.75rem;
-    /* Padding toegevoegd zodat tekst niet tegen het kader plakt */
 }
 
 .about-text-card p {
@@ -489,7 +499,6 @@ body {
 
 .about-text-card a {
     color: var(--accent-cyan);
-    /* Aangepast naar bestaande variabele */
     text-decoration: underline;
     font-weight: 500;
 }
@@ -504,7 +513,6 @@ body {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--accent-cyan);
-    /* Aangepast naar bestaande variabele */
     margin-bottom: 1.25rem;
 }
 
@@ -527,17 +535,9 @@ body {
 
 .highlight-list li i {
     color: var(--accent-cyan);
-    /* Aangepast naar bestaande variabele */
 }
 
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* --- Section 1: Projects --- */
+/* --- Projects Section --- */
 .work {
     padding: 5rem 0;
 }
@@ -679,7 +679,7 @@ body {
     border: 1px solid var(--border-card);
 }
 
-/* --- Section 2: Software Lab & Terminal --- */
+/* --- Software Lab & Terminal --- */
 .lab-section {
     padding: 3rem 0;
 }
@@ -813,7 +813,7 @@ body {
     }
 }
 
-/* --- Section 3: Skills & Certifications --- */
+/* --- Skills & Certifications --- */
 .skills {
     padding: 5rem 0;
 }
@@ -927,7 +927,7 @@ body {
     color: var(--text-muted);
 }
 
-/* --- Section 4: Education --- */
+/* --- Education --- */
 .edu-wrap {
     padding: 5rem 0;
 }
@@ -1010,7 +1010,7 @@ body {
     color: var(--text-muted);
 }
 
-/* --- Section 5: Contact & Footer --- */
+/* --- Contact & Footer --- */
 .connect {
     padding: 5rem 0;
 }
@@ -1118,6 +1118,35 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    /* Mobile Navigation Logic */
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .nav-content {
+        flex-wrap: wrap;
+    }
+
+    .nav-links-desktop {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+        border-top: 1px solid var(--border-card);
+    }
+
+    .nav-links-desktop.active {
+        display: flex;
+    }
+
+    /* Hero & General Mobile Adjustments */
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1138,10 +1167,6 @@ body {
 
     .hero-socials {
         justify-content: center;
-    }
-
-    .nav-links-desktop {
-        display: none;
     }
 
     .portfolio-footer {

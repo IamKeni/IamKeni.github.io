@@ -224,7 +224,32 @@ function loadPreferences() {
     }
 }
 
+// Mobile Navigation Toggle
+function setupMobileNav() {
+    const toggleBtn = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (!toggleBtn || !navLinks) return;
+
+    toggleBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        const icon = toggleBtn.querySelector('i');
+        if (icon) {
+            icon.className = navLinks.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
+        }
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+            const icon = toggleBtn.querySelector('i');
+            if (icon) icon.className = 'fas fa-bars';
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     loadPreferences();
     setupIntersectionObserver();
+    setupMobileNav();
 });
