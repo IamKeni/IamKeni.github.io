@@ -64,7 +64,45 @@ const translations = {
         'cta-text': 'Of je nu een vraag hebt, een project wilt bespreken of wilt netwerken — mijn mailbox staat open.',
         'send-message': 'Stuur Een Bericht',
         'footer': '| Cloud & Security Portfolio',
-        'back-top': 'Terug naar boven'
+        'footer-privacy': 'Privacy & Disclaimer',
+        'back-top': 'Terug naar boven',
+
+        'privacy-page-title': 'Privacy & Disclaimer',
+        'privacy-subtitle': 'Informatie over privacy, gegevensverwerking, cookies en het gebruik van deze website.',
+        'privacy-back': 'Terug naar Portfolio',
+        'privacy-updated': 'Laatst bijgewerkt: 2026',
+
+        'privacy-card1-title': '1. Algemeen & Privacyverklaring',
+        'privacy-card1-p1': 'Welkom op de portfolio-website van <strong>Henry Elsinga</strong> (bereikbaar via <code>henryelsinga.nl</code>). Ik hecht veel waarde aan privacy en transparantie. Deze website is ontworpen om mijn kennis, projecten en ervaringen als HBO-ICT Cloud & Security student te tonen.',
+        'privacy-card1-p2': 'Deze website verzamelt geen direct identificeerbare persoonsgegevens van bezoekers, tenzij je er zelf voor kiest om per e-mail contact met mij op te nemen. Er worden geen trackingprofielen opgebouwd en er is geen sprake van geautomatiseerde besluitvorming.',
+
+        'privacy-card2-title': '2. Gegevensverwerking bij Contact',
+        'privacy-card2-p1': 'Als je contact met mij opneemt via e-mail of LinkedIn, worden de door jou verstrekte gegevens (zoals je naam, e-mailadres en de inhoud van je bericht) uitsluitend gebruikt om te reageren op je vraag of verzoek.',
+        'privacy-card2-p2': 'Deze communicatiegegevens worden vertrouwelijk behandeld, nooit aan derden verstrekt voor commerciële doeleinden en niet langer bewaard dan noodzakelijk voor het betreffende contact.',
+
+        'privacy-card3-title': '3. Cookies & Lokale Browseropslag',
+        'privacy-card3-p1': 'Deze website maakt <strong>geen</strong> gebruik van tracking-cookies, advertentiecookies of analytische cookies van derden.',
+        'privacy-card3-p2': 'Om je gebruikerservaring te verbeteren, maakt de website uitsluitend gebruik van browser <code>localStorage</code> voor functionele doeleinden:',
+        'privacy-card3-li1': '<strong>Thema-voorkeur:</strong> het onthouden of je de website in de lichte of donkere modus wilt bekijken (<code>theme</code>).',
+        'privacy-card3-li2': '<strong>Taalvoorkeur:</strong> het onthouden van de gekozen taal (<code>language</code>: Nederlands of Engels).',
+        'privacy-card3-p3': 'Deze gegevens blijven te allen tijde lokaal op jouw apparaat opgeslagen en worden nooit naar externe servers verzonden.',
+
+        'privacy-card4-title': '4. Externe Links & Software Lab',
+        'privacy-card4-p1': 'Op deze website staan links naar externe platforms en diensten, waaronder GitHub, LinkedIn en softwareprojecten onder de naam <strong>IamKenii Productions</strong> (zoals <code>ip.henryelsinga.nl</code>).',
+        'privacy-card4-p2': 'Zodra je via een link deze website verlaat, is het privacybeleid van de betreffende externe partij of dienst van toepassing. Ik ben niet verantwoordelijk voor de privacybescherming of inhoud van websites van derden.',
+
+        'privacy-card5-title': '5. Disclaimer & Aansprakelijkheid',
+        'privacy-card5-p1': 'De informatie, projecten, scripts en casestudies op deze website worden uitsluitend voor educatieve, informatieve en portfolio-doeleinden aangeboden.',
+        'privacy-card5-p2': 'Hoewel er constante zorg en aandacht wordt besteed aan de inhoud, kan niet worden gegarandeerd dat alle informatie te allen tijde foutloos, volledig of actueel is. Het gebruik van codevoorbeelden, scripts of configuraties geschiedt geheel op eigen risico. Henry Elsinga is niet aansprakelijk voor enige directe of indirecte schade voortvloeiend uit het gebruik van deze website.',
+
+        'privacy-card6-title': '6. Intellectueel Eigendom & Auteursrecht',
+        'privacy-card6-p1': 'Tenzij expliciet anders aangegeven, berusten alle intellectuele eigendomsrechten op teksten, ontwerpen, grafische elementen en portfolio-inhoud bij Henry Elsinga / IamKenii Productions.',
+        'privacy-card6-p2': 'Het overnemen, verspreiden of hergebruiken van inhoud zonder voorafgaande toestemming is niet toegestaan, met uitzondering van opensource projecten die onder een specifieke licentie (zoals MIT of Apache) zijn vrijgegeven op mijn GitHub-profiel.',
+
+        'privacy-card7-title': '7. Contact & Vragen',
+        'privacy-card7-p1': 'Heb je vragen, opmerkingen of verzoeken met betrekking tot deze Privacy & Disclaimer? Neem dan gerust contact op:',
+        'privacy-contact-email': 'E-mail:',
+        'privacy-contact-web': 'Website:'
     },
     en: {
         'nav-projects': 'Projects',
@@ -130,7 +168,45 @@ const translations = {
         'cta-text': 'Whether you have a question, want to discuss a project, or just network — my inbox is open.',
         'send-message': 'Send a Message',
         'footer': '| Cloud & Security Portfolio',
-        'back-top': 'Back to top'
+        'footer-privacy': 'Privacy & Disclaimer',
+        'back-top': 'Back to top',
+
+        'privacy-page-title': 'Privacy & Disclaimer',
+        'privacy-subtitle': 'Information regarding privacy, data handling, cookies, and the terms of using this website.',
+        'privacy-back': 'Back to Portfolio',
+        'privacy-updated': 'Last updated: 2026',
+
+        'privacy-card1-title': '1. General & Privacy Statement',
+        'privacy-card1-p1': 'Welcome to the portfolio website of <strong>Henry Elsinga</strong> (accessible via <code>henryelsinga.nl</code>). I highly value privacy and transparency. This website is built to showcase my knowledge, projects, and practical experience as an HBO-ICT Cloud & Security student.',
+        'privacy-card1-p2': 'This website does not collect directly identifiable personal data from visitors unless you intentionally reach out via email. No tracking profiles are created, and no automated decision-making is employed.',
+
+        'privacy-card2-title': '2. Data Handling on Contact',
+        'privacy-card2-p1': 'When contacting me via email or LinkedIn, the information you provide (such as your name, email address, and message contents) is used exclusively to respond to your inquiry.',
+        'privacy-card2-p2': 'Your communication data is treated confidentially, never provided to third parties for commercial purposes, and not stored longer than necessary for our communication.',
+
+        'privacy-card3-title': '3. Cookies & Local Browser Storage',
+        'privacy-card3-p1': 'This website does <strong>not</strong> use tracking cookies, advertising cookies, or third-party analytics cookies.',
+        'privacy-card3-p2': 'To enhance your browsing experience, the site strictly uses browser <code>localStorage</code> for functional preferences:',
+        'privacy-card3-li1': '<strong>Theme preference:</strong> remembering whether you prefer dark or light mode (<code>theme</code>).',
+        'privacy-card3-li2': '<strong>Language preference:</strong> remembering your preferred language (<code>language</code>: Dutch or English).',
+        'privacy-card3-p3': 'This data remains stored locally on your device at all times and is never transmitted to external servers.',
+
+        'privacy-card4-title': '4. External Links & Software Lab',
+        'privacy-card4-p1': 'This website contains links to external platforms and services, including GitHub, LinkedIn, and software projects under the name <strong>IamKenii Productions</strong> (such as <code>ip.henryelsinga.nl</code>).',
+        'privacy-card4-p2': 'Once you navigate away via an external link, the privacy policy of that respective third-party service applies. I am not responsible for the privacy practices or content of external websites.',
+
+        'privacy-card5-title': '5. Disclaimer & Liability',
+        'privacy-card5-p1': 'The information, projects, scripts, and case studies on this website are provided solely for educational, informational, and portfolio demonstration purposes.',
+        'privacy-card5-p2': 'While constant care is taken to ensure content accuracy, no guarantees are made that all information is complete, error-free, or up-to-date. Any implementation of shared code, scripts, or configurations is at your own risk. Henry Elsinga is not liable for any direct or indirect damages resulting from using this website.',
+
+        'privacy-card6-title': '6. Intellectual Property & Copyright',
+        'privacy-card6-p1': 'Unless explicitly stated otherwise, all intellectual property rights to text, layout, graphical elements, and portfolio content belong to Henry Elsinga / IamKenii Productions.',
+        'privacy-card6-p2': 'Reproduction, distribution, or reuse of content without prior permission is prohibited, except for open-source repositories published under specific licenses (e.g. MIT or Apache) on my GitHub profile.',
+
+        'privacy-card7-title': '7. Contact & Inquiries',
+        'privacy-card7-p1': 'If you have questions, feedback, or requests regarding this Privacy & Disclaimer, feel free to reach out:',
+        'privacy-contact-email': 'Email:',
+        'privacy-contact-web': 'Website:'
     }
 };
 

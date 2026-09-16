@@ -473,7 +473,6 @@ body {
 .subtitle {
     color: var(--text-muted);
     max-width: 600px;
-    margin: 0.5rem auto 0;
 }
 
 /* --- About Section --- */
@@ -1085,7 +1084,14 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.25rem;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .footer-links a {
@@ -1096,6 +1102,139 @@ body {
 
 .footer-links a:hover {
     color: var(--accent-cyan);
+}
+
+/* --- Legal / Privacy Page Styles --- */
+.legal-wrapper {
+    padding-top: 6.5rem;
+    padding-bottom: 3rem;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.legal-header {
+    margin-bottom: 2.5rem;
+}
+
+.legal-header .title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.legal-header-meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+}
+
+.legal-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.legal-card {
+    padding: 2rem;
+}
+
+.legal-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+.legal-card h2 i {
+    color: var(--accent-cyan);
+    font-size: 1.1rem;
+}
+
+.legal-card p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.legal-card p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-card code {
+    font-family: var(--font-code);
+    font-size: 0.88em;
+    padding: 0.15rem 0.4rem;
+    border-radius: 6px;
+    background: rgba(140, 168, 196, 0.12);
+    color: var(--text-main);
+    border: 1px solid var(--border-card);
+}
+
+.legal-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.legal-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+.legal-list li::before {
+    content: "•";
+    color: var(--accent-cyan);
+    position: absolute;
+    left: 0.4rem;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.legal-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.legal-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-muted);
+}
+
+.legal-contact-list li i {
+    color: var(--accent-cyan);
+    width: 16px;
+}
+
+.legal-contact-list a {
+    color: var(--accent-cyan);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.legal-contact-list a:hover {
+    text-decoration: underline;
+}
+
+.back-nav-wrap {
+    margin-bottom: 2rem;
 }
 
 /* Reveal Animations */
